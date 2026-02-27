@@ -1,1 +1,152 @@
-body {}
+/* 모바일 기준 w440 */
+html {scroll-behavior: smooth;} /* 스크롤 애니메이션 효과 */
+body, html {background-color:#ffffff;}
+ /* ### Firefox */
+html {scrollbar-width: 10px;;scrollbar-color: #ffffff #910000;}
+/* ### Opera */
+html::-o-scrollbar {width: 10px;}
+html::-o-scrollbar-thumb {background-color: #222; border-radius: 5px;}
+/* ### Chrome, Safari, Edge 등 웹킷 기반 브라우저 */
+html {
+    ::-webkit-scrollbar {width: 10px;}
+    ::-webkit-scrollbar-track {box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);}
+    ::-webkit-scrollbar-thumb {background-color: #222; border-radius: 5px;}
+}
+body {
+    background-color: #222;
+}
+#wrap {
+    background-color: white;
+    width: 440px; /* 디자인 기준 크기(아이폰 17프로맥스) */
+    min-width: 320px; /* 최소 제한 너비(고정) */
+    max-width: 440px; /* 최대 제한 너비(디자인에 따라 다름) */
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+    overflow-x:hidden; margin: 0 auto;
+    height:100vh;
+}
+/* =============================1. intro */
+#wrap .intro {
+    height:100vh;
+    background: linear-gradient(#fff 70%, #E5E5E5); /* 그라데이션 색상옆 공백 후 퍼센티지: 색상 위치 */
+    display:flex; flex-flow: row nowrap;
+    justify-content: center; align-items: center;
+}
+#wrap .intro h1 {}
+#wrap .intro h1 span {
+    display: block; text-align: center;
+    font-size: 1.31rem; line-height: 1.4; font-weight: 300;
+}
+#wrap .intro h1 span:nth-child(1) {}
+#wrap .intro h1 span:nth-child(2) {}
+#wrap .intro h1 .name {
+    margin-top: 20px;
+}
+/* =============================2. info */
+#wrap .info {
+    height: 100vh;
+    display: flex; flex-flow: column wrap;
+    justify-content: center; align-items: center;
+    text-align: center;
+}
+#wrap .info .photo {
+    width: 199px; height: 205px;
+    border-radius: 16px;
+    background-color: #E5E5E5;
+}
+#wrap .info .photo img { width: 100%;}
+#wrap .info .profile {
+    display: flex; flex-flow: row wrap;
+    justify-content: space-around;
+    padding-top: 18px;
+}
+#wrap .info .profile li {
+    font-size: 0.88rem; font-weight:300; line-height: 1.4;
+    text-align: center;
+    margin: 0 0 3px;
+    width: 100%;
+}
+#wrap .info .profile li:nth-child(1) {text-align: right; width: 42%;}
+#wrap .info .profile li:nth-child(2) {text-align: left; width: 45%;}
+#wrap .info .profile li:nth-child(3) {}
+#wrap .info .profile li:nth-child(4) {}
+#wrap .info .profile li:nth-child(5) {margin: 0;}
+#wrap .info .profile li a {}
+#wrap .info h2 {
+    font-size: 1.13rem; font-weight:600;
+    padding-bottom: 15px;
+    padding-top: 29px;
+}
+#wrap .info .s_list {
+    padding: 0 15px;
+    display: flex; flex-flow: row wrap; gap: 12px;
+    justify-content: center; align-items: center;
+}
+#wrap .info .s_list p {
+    width: (((100% - 106px) - 60px ) / 7); height: calc(((100% - 106px) - 60px ) / 7);
+}
+#wrap .info .s_list p img {width: 100%;}
+#wrap .project_wrap {
+    height: 100vh;
+    text-align: center;
+}
+#wrap .project_wrap h1 {
+    font-size: 1.06rem; font-weight: 600; padding: 50px 60px;
+}
+/* =============================공통 프로젝트 선택자 */
+#wrap .project_wrap .project {}
+#wrap .project_wrap .project .p_work {}
+#wrap .project_wrap .project .p_work h2 {
+    font-size: 1.06rem; font-weight:600; padding-bottom: 19px;
+}
+#wrap .project_wrap .project .p_work .mockup_img {}
+#wrap .project_wrap .project .p_work .mockup_img img {width: 100%; padding: 0 15px;}
+#wrap .project_wrap .project .p_work .p_info {
+    display: flex; flex-flow: column nowrap;
+    align-items:flex-start;
+    padding: 21px 43px 0;
+}
+#wrap .project_wrap .project .p_work .p_info li::before {
+    background:rgb(0, 0, 0);
+    content:''; display: block;
+    width: 2px; height: 2px;
+    border-radius: 50%;
+    left:-10px; top:50%; transform: translateY(-50%); /* transform : 세부위치 조정 */
+    position: absolute;
+}
+#wrap .project_wrap .project .p_work .p_info li:nth-child(2)::before {}
+#wrap .project_wrap .project .p_work .p_info li:nth-child(3)::before {}
+#wrap .project_wrap .project .p_work .p_info li:nth-child(4)::before {}
+#wrap .project_wrap .project .p_work .p_info li {
+    font-size: 0.75rem;  line-height: 1.8;
+    position: relative;
+}
+#wrap .project_wrap .project .p_work .plan {
+    font-size: 0.75rem;  line-height: 1.6;
+    padding: 19px 15px 60px;
+    text-align: left;
+}
+#wrap .project_wrap .project .link {
+}
+#wrap .project_wrap .project .link a:hover {
+    background-color: #910000;
+}
+#wrap .project_wrap .project .link a {
+    padding: 7px 40px;
+    border-radius: 40px;
+    color: #fff;
+    transition: background-color 0.3s;
+}
+#wrap .project_wrap .project .link .proposal,
+#wrap .project_wrap .project .link .prototype {
+    font-size: 0.88rem; font-weight:700;
+}
+#wrap .project_wrap .project .link .proposal {
+    background-color: #FF8800;
+    margin-right: 20px;
+}
+#wrap .project_wrap .project .link .prototype {
+    background-color: #000;
+}
+/* =============================keyfr */
+/* =============================개별 프로젝트 선택자 */
+#wrap .project_wrap .project1 {}
