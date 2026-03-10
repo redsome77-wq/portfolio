@@ -1,0 +1,80 @@
+/* responsive.css */
+@media screen and (min-width: 600px) {
+    /* 1행 글자크기, 여백 등 */
+    #wrap .intro h1 span {
+    font-size: 1.44rem;
+    }
+    #wrap .intro h1 .name {
+        transform: scale(1.3);
+    }
+    /* 3행 프로젝트 이미지 늘어나기 */
+    #wrap .project_wrap .project .title_thum .mockup_img {
+        height: auto; /* 100% 덮어쓰기값으로 auto변경 */
+        width: 100%;
+    }
+    /* 4행 그래픽 이미지 확대 */
+    #wrap .project_wrap .graphic_wrap .graphic_container a {
+        width: 246px; height: 400px;
+    }
+} /* 사용자가 보는 기기너비가 600보다 크면 */
+@media screen and (min-width: 840px) {
+    /* 1행 글자크기, 여백 등 */
+    /* 2행 info ->  1행2열 레이아웃 구조 변경*/
+    #wrap > .info {
+        display: flex; flex-flow: row nowrap;
+        justify-content: center; align-items:flex-start;
+        gap:70px;
+        height: auto;
+    }
+    #wrap .info .profile {
+        margin: 0 0;
+    }
+    #wrap .info .details {
+        display: flex; flex-flow: column nowrap; gap:20px;
+    }
+    #wrap .info .details dt {
+        font-size: 1.13rem; font-weight: 600; line-height: 1.4;
+    }
+    #wrap .info .details dd {
+        font-size: 0.88rem; font-weight:300; line-height: 1.7;
+    }
+    /* 3행 web ->  1행2열 레이아웃 구조 변경*/
+    #wrap .project_wrap .project {
+        width: 100%;
+        display: flex; flex-flow: row nowrap;
+        align-items:flex-end;
+        gap:26px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+    #wrap .project_wrap .project .title_thum {}
+    #wrap .project_wrap .project .title_thum h2 {
+        text-align: left;
+    }
+    #wrap .project_wrap .project .title_thum .mockup_img img{
+        padding: 0 0;
+    }
+    #wrap .project_wrap .project .details .p_info {
+        padding: 0 0;
+    }
+    #wrap .project_wrap .project .details .plan {
+        padding: 0 0 60px;
+    }
+    #wrap .project_wrap .project .details .link {
+        justify-content:flex-start;
+    }
+    #wrap .project_wrap .project .details .link p a {
+        padding: 9px 35px;
+    }
+    /* 4행 그래픽 이미지 확대 */
+    #wrap .project_wrap .graphic_title h1 {
+        padding-bottom: 9px;
+    }
+    #wrap .project_wrap .graphic_title p {
+        margin-bottom: 60px;
+        /* 4행 그래픽 이미지 호버 */
+    }
+    #wrap .project_wrap .graphic_wrap .graphic_container a:hover {
+        transform: scale(1.3) translateY(45px);
+    }
+} /* 사용자가 보는 기기너비가 840보다 크면 */

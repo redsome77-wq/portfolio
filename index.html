@@ -9,9 +9,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>포트폴리오 - 박다솜</title>
     <!-- 웹글꼴 넣기 -->
-        <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
-        <link rel="stylesheet" href="./style/reset.css">
-        <link rel="stylesheet" href="./style/index.css">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/index.css">
+    <link rel="stylesheet" href="./style/responsive.css">
 </head>
 <body>
     <div id="wrap">
@@ -23,34 +24,60 @@
             </h1>
         </div>
         <div class="info">
-            <p class="photo"><img src="" alt=""></p>
-            <ul class="profile">
-                <li>박다솜</li>
-                <li>1994.10.10</li>
-                <li>010.1234.4578</li>
-                <li>red******@naver.com</li>
-                <li><a href="https://github.com/redsome77-wq" target="_blank">https://github.com/redsome77-wq</a></li>
-            </ul>
-            <h2>Skill</h2>
-            <div class="s_list">
-                <p><img src="./img/skill04.jpg" alt="제이쿼리"></p>
-                <p><img src="./img/skill05.jpg" alt="html"></p>
-                <p><img src="./img/skill06.jpg" alt="css"></p>
-                <p><img src="./img/skill07.jpg" alt="피그마"></p>
-                <p><img src="./img/skill08.png" alt="git"></p>
-                <p><img src="./img/skill09.png" alt="카페24"></p>
-                <p><img src="./img/skill01.jpg" alt="일러스트"></p>
-                <p><img src="./img/skill02.jpg" alt="포토샵"></p>
-                <p><img src="./img/skill03.jpg" alt="인디자인"></p>
+            <div class="profile">
+                <p class="photo"><img src="" alt=""></p>
+                <ul class="profile_me">
+                    <li>박다솜</li>
+                    <li>1994.10.10</li>
+                    <li>010.1234.4578</li>
+                    <li>red******@naver.com</li>
+                    <li><a href="https://github.com/redsome77-wq" target="_blank">https://github.com/redsome77-wq</a></li>
+                </ul>
+                <h2>Skill</h2>
+                <div class="s_list"> <!-- div에 너비 주기, 이미지 가로세로 계산 다시// 높이 없애기 -->
+                    <p><img src="./img/skill01.jpg" alt="일러스트"></p>
+                    <p><img src="./img/skill02.jpg" alt="포토샵"></p>
+                    <p><img src="./img/skill03.jpg" alt="인디자인"></p>
+                    <p><img src="./img/skill04.jpg" alt="제이쿼리"></p>
+                    <p><img src="./img/skill05.jpg" alt="html"></p>
+                    <p><img src="./img/skill06.jpg" alt="css"></p>
+                    <p><img src="./img/skill07.jpg" alt="피그마"></p>
+                    <p><img src="./img/skill08.png" alt="git"></p>
+                    <p><img src="./img/skill09.png" alt="카페24"></p>
+                </div>
+            </div>
+            <div class="details">
+                <dl>
+                    <dt>학력 및 경력정보</dt>
+                    <dd>25/12/27~26/5/18 UI/UX 반응형 웹디자인&웹퍼블리셔 양성과정 수료</dd>
+                    <dd>이후 추가</dd>
+                </dl>
+                <dl>
+                    <dt>보유 자격</dt>
+                    <dd>컴퓨터그래픽스운용기능사 외</dd>
+                    <dd>이후 추가</dd>
+                </dl>
+                <dl>
+                    <dt>프로그램 가능 목록</dt>
+                    <dd>HTML & CSS 반응형웹 구현 능력 보유</dd>
+                    <dd>카페24 쇼핑몰 호스팅을 활용한 탬플릿 수정 가능</dd>
+                    <dd>git 다양한 명령어를 활용한 gitHub 호스팅 관련 작업 폴더 관리 능력 보유</dd>
+                    <dd>Photoshop 이용 다양한 합성 기술, 광고 배너 디자인, 마케팅 랜딩페이지 디자인 제작가능</dd>
+                    <dd>Illustrator 이용 로고 디자인 가능, 캐릭터 일러스트 표현 가능</dd>
+                    <dd>Javascript 활용한 웹에 들어가는 최신 동적 애니메이션 활용 가능</dd>
+                </dl>
             </div>
         </div>
         <!-- 프로젝트 시작 -->
         <div class="project_wrap">
+            <!-- ================================================웹디자인 시작 -->
             <h1>Project</h1>
             <div class="project project1">
-                <div class="p_work">
+                <div class="title_thum">
                     <h2>1. 호랑가시나무게스트하우스 ReDesign</h2>
-                    <p class="mockup_img"><img src="./img/pf1.jpg" alt=""></p>
+                    <p class="mockup_img"><img src="./img/web/pf1.jpg" alt=""></p>
+                </div>
+                <div class="details">
                     <ul class="p_info">
                         <li>작업 기간 : 2026.02.01 ~ 2026.02.28 (nnn시간)</li>
                         <li>사용 스킬 : html, css, photoshop, illustrator, figma, git</li>
@@ -58,10 +85,40 @@
                         <li>팀 / 개인 작업물 기여도 : 100%</li>
                     </ul>
                     <p class="plan">기획 의도 : 기존 호랑가시나무 게스트하우스의 불편함을 조사/분석하여 메인페이지부터 객실, 로그인, 가입을 최신 호텔 및 게스트하우스를 레퍼런스 삼아 리디자인 했습니다.</p>
+                    <div class="link">
+                        <p><a href="#" target="_blank" class="proposal">기획서</a></p>
+                        <p><a href="#" target="_blank" class="prototype">프로토타입 결과 보기</a></p>
+                    </div>
                 </div>
-                <div class="link">
-                    <a href="#" target="_blank" class="proposal">기획서</a>
-                    <a href="#" target="_blank" class="prototype">프로토타입 결과 보기</a>
+            </div>
+            <!-- ================================================그래픽디자인 시작 -->
+            <div class="graphic_title">
+                <h1>Graphic Design</h1>
+                <p>이미지를 클릭하면 크게 볼 수 있습니다.</p>
+            </div>
+            <!-- 보이는영역(뷰포트) > 슬라이드부모 > 개별슬라이드들 -->
+            <div class="graphic_wrap">
+                <div class="graphic_container">
+                    <a href="#"><img src="./img/web/design01.jpg" alt=""></a>
+                    <a href="#"><img src="./img/web/design02.jpg" alt=""></a>
+                    <a href="#"><img src="./img/web/design03.jpg" alt=""></a>
+                    <a href="#"><img src="./img/web/design04.jpg" alt=""></a>
+                    <a href="#"><img src="./img/web/design05.jpg" alt=""></a>
+                    <a href="#"><img src="./img/web/design06.jpg" alt=""></a>
+                    <a href="#"><img src="./img/web/design07.jpg" alt=""></a>
+                    <a href="#"><img src="./img/web/design08.jpg" alt=""></a>
+                    <a href="#"><img src="./img/web/design09.jpg" alt=""></a>
+                    <a href="#"><img src="./img/web/design10.png" alt=""></a>
+                    <a href="#"><img src="./img/web/design11.jpg" alt=""></a>
+                    <a href="#"><img src="./img/web/design12.jpg" alt=""></a>
+                    <a href="#"><img src="./img/web/design13.jpg" alt=""></a>
+                    <a href="#"><img src="./img/web/design14.jpg" alt=""></a>
+                </div>
+            </div>
+            <!-- 위 그래픽 이미지 클릭시 실행되는 팝업 -->
+            <div class="graphic_popup_bg">
+                <div class="popup">
+                    <img src="./img/web/design05.jpg" alt="">
                 </div>
             </div>
         </div>
