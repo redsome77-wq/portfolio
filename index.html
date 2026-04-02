@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./style/reset.css">
     <link rel="stylesheet" href="./style/index.css">
     <link rel="stylesheet" href="./style/responsive.css">
+    <script src="./scripts/index.js" defer></script>
 </head>
 <body>
     <div id="wrap">
@@ -99,9 +100,9 @@
             <!-- 보이는영역(뷰포트) > 슬라이드부모 > 개별슬라이드들 -->
             <div class="graphic_wrap">
                 <div class="graphic_container">
-                    <a href="#"><img src="./img/web/design01.jpg" alt=""></a>
-                    <a href="#"><img src="./img/web/design02.jpg" alt=""></a>
                     <a href="#"><img src="./img/web/design03.jpg" alt=""></a>
+                    <a href="#"><img src="./img/web/design02.jpg" alt=""></a>
+                    <a href="#"><img src="./img/web/design14.jpg" alt=""></a>
                     <a href="#"><img src="./img/web/design04.jpg" alt=""></a>
                     <a href="#"><img src="./img/web/design05.jpg" alt=""></a>
                     <a href="#"><img src="./img/web/design06.jpg" alt=""></a>
@@ -112,12 +113,15 @@
                     <a href="#"><img src="./img/web/design11.jpg" alt=""></a>
                     <a href="#"><img src="./img/web/design12.jpg" alt=""></a>
                     <a href="#"><img src="./img/web/design13.jpg" alt=""></a>
-                    <a href="#"><img src="./img/web/design14.jpg" alt=""></a>
+                    <a href="#"><img src="./img/web/design01.jpg" alt=""></a>
                 </div>
             </div>
             <!-- 위 그래픽 이미지 클릭시 실행되는 팝업 -->
-            <div class="graphic_popup_bg">
+            <div class="graphic_popup_bg" title="아무 곳이나 클릭하면 팝업이 닫힙니다.">
                 <div class="popup">
+                    <p>아무 곳이나 누르면 닫혀요!
+                        <button type="button" id="close_btn">X</button>
+                    </p>
                     <img src="./img/web/design05.jpg" alt="">
                 </div>
             </div>

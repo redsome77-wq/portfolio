@@ -208,7 +208,7 @@ body {
 }
 /* =============================위 그래픽 이미지 클릭시 실행되는 팝업 */
 #wrap .project_wrap .graphic_popup_bg {
-    display: none;
+    display: none; /* 팝업 감춘상태 ------------------------------------------- */
     position: fixed; left: 0; top: 0; width: 100%; height: 100%;
     background: rgba(0, 0, 0, 0.5);
     /* display: flex; justify-content: center; align-items: center; */
