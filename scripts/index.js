@@ -26,7 +26,7 @@ graphic_popup_close.addEventListener('click', function(){ //5.
 
 
 
-function graphic_function (event, index, w=80, h=60){
+function graphic_function (event, index, w=50, h=80){
     event.preventDefault();
     let aSrc = graphic_project_a[index].children[0].src;
     graphic_popup.style.display='block'
@@ -58,9 +58,9 @@ function graphic_function (event, index, w=80, h=60){
     document.body.style.overflow = 'hidden';
 }); */
 
-graphic_project_a[0].addEventListener('click', function(e){graphic_function(e, 0, 35, 77)});
-graphic_project_a[1].addEventListener('click', function(e){graphic_function(e, 1, 40, 80)});
-graphic_project_a[2].addEventListener('click', function(e){graphic_function(e, 2)});
+graphic_project_a[0].addEventListener('click', function(e){graphic_function(e, 0, 44)});
+graphic_project_a[1].addEventListener('click', function(e){graphic_function(e, 1, 47)});
+graphic_project_a[2].addEventListener('click', function(e){graphic_function(e, 2, 50)});
 graphic_project_a[3].addEventListener('click', function(e){graphic_function(e, 3)});
 graphic_project_a[4].addEventListener('click', function(e){graphic_function(e, 4)});
 graphic_project_a[5].addEventListener('click', function(e){graphic_function(e, 5)});
