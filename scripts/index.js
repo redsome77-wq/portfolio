@@ -12,18 +12,16 @@ const graphic_project_a = document.querySelectorAll('.graphic_container a');
 const graphic_popup = document.querySelector('.graphic_popup_bg');
 const graphic_popup_close = graphic_popup.querySelector('#close_btn');
 console.log(graphic_project_a, graphic_popup, graphic_popup_close);
-
-
 console.log(graphic_project_a[0].children[0].src);
 console.log(graphic_popup.children[0].children[1].src);
+console.log('-------------------------');
 console.log(graphic_popup_close.parentNode.parentNode.parentNode);
-
+console.log('-------------------------');
 graphic_popup_close.addEventListener('click', function(){ //5.
     graphic_popup_close.parentNode.parentNode.parentNode.style.display='none';
     //팝업 닫힐시 전체 스크롤 다시 실행 (auto, visible)
     document.body.style.overflow = 'visible';
 });
-
 
 
 function graphic_function (event, index, w=50, h=80){
