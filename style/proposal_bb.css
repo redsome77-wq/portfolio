@@ -1,0 +1,613 @@
+html {scroll-behavior: smooth;} /* 스크롤 애니메이션 효과 */
+body {}
+body * {}
+body main {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+body main section {
+  min-height: 100vh;
+  height: auto;
+  padding-top: 200px;
+  width: 100%;
+  scroll-snap-align: start;
+}
+body main section.no-scroll {
+  scroll-snap-align: none;
+}
+
+body main section .contents {
+  margin: 0 auto;
+  width: 1350px;
+}
+body main section .contents .reveal {}
+body main section .contents .reveal.active {}
+body main section .contents .section_title {
+  font-size: 1.25rem; font-weight:700; height: fit-content;
+  border-bottom: #e72819 solid 5px;width: fit-content; 
+  line-height: 1.5;
+}
+body main section .contents .section_label {}
+body main section .contents .body_text {}
+body main section em {}
+body main section img {}
+
+
+body main #hero {
+  padding-top: 0px;
+  background-image: url(../img/hero-bebedepino.jpeg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+body main #hero::before {
+  content: ''; width: 100%; height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute; z-index: 990;
+}
+body main #hero .hero_contents {
+}
+body main #hero .hero_contents .hero_left {}
+body main #hero .hero_contents .hero_left > p {
+}
+body main #hero .hero_contents .hero_left > p:first-child {
+  padding-top: 200px;
+  font-weight: 800;
+}
+body main #hero .hero_contents .hero_left .hero_title {
+  position: relative; z-index: 999;
+}
+body main #hero .hero_contents .hero_left .hero_title h1 {
+  font-family: 'Titan One';
+  line-height: 0.8;
+  font-size: 4.375em; color: #fff;
+  margin-top: 33px;
+  margin-bottom: 11px;
+}
+body main #hero .hero_contents .hero_left .hero_title h1 span {
+  font-family: 'Titan One';
+  color: #e72819;
+}
+body main #hero .hero_contents .hero_left .hero_title .hero_subtitle {
+  font-weight: 500;
+}
+body main #hero .hero_contents .hero_left .hero_info {
+  margin-top: 50px;
+  font-size: 0.81em; line-height: 1.5;
+}
+body main #hero .hero_contents .hero_left .hero_info br {}
+
+body main #overview {
+  padding-top: 200px;
+}
+body main #overview .overview_contents {}
+body main #overview .overview_contents .reveal {
+  display: flex; flex-flow: row nowrap; justify-content: space-between;
+}
+body main #overview .overview_contents .reveal .section_title {}
+body main #overview .overview_contents .reveal .overview_right {}
+body main #overview .overview_contents .reveal .overview_right .bbimg {
+  margin-bottom: 50px;
+}
+body main #overview .overview_contents .reveal .overview_right .bbimg img {width: 100%;}
+body main #overview .overview_contents .reveal .overview_right > p {
+  font-size: 1.12;
+  line-height: 1.5;
+}
+
+body main #keyword {}
+body main #keyword .keyword_contents {}
+body main #keyword .keyword_contents .reveal .section_title {
+  margin: 0 auto;
+}
+body main #keyword .keyword_contents .reveal {}
+body main #keyword .keyword_contents .keyword_cards {
+  width: 100%;
+  margin: 0 auto;
+  display: flex; flex-flow: row nowrap;
+  justify-content: space-between; align-items: center; gap: 90px;
+  text-align: center;
+  margin-top: 150px;
+}
+body main #keyword .keyword_contents .keyword_cards .keyword {
+  width: 100%;
+  margin: 0 auto;
+}
+body main #keyword .keyword_contents .keyword_cards .keyword.card1 {}
+body main #keyword .keyword_contents .keyword_cards .keyword.card2 {}
+body main #keyword .keyword_contents .keyword_cards .keyword.card3 {}
+body main #keyword .keyword_contents .keyword_cards .keyword .kw_icon {
+  margin: 0 auto;
+  width: 80px;
+  margin-bottom: 23px;
+}
+body main #keyword .keyword_contents .keyword_cards .keyword .kw_icon img {width: 100%;}
+body main #keyword .keyword_contents .keyword_cards .keyword .kw_title {
+  margin-bottom: 10px;
+  font-size: 1.25em; font-weight: 700;
+}
+body main #keyword .keyword_contents .keyword_cards .keyword .kw_desc {
+  font-weight: 500;
+}
+
+body main #target {}
+body main #target .target_contents {}
+body main #target .target_contents .reveal {}
+body main #target .target_contents .reveal .section_title {
+    margin: 0 auto;
+}
+body main #target .target_contents .target_layout {
+  width: 100%; height: 202px;
+  margin-top: 100px; gap: 100px;
+  display: flex; flex-flow: row nowrap;
+  align-items: center; justify-content: center;
+}
+body main #target .target_contents .target_layout .target_left {}
+body main #target .target_contents .target_layout .target_left .target_icon {width: 202px;}
+body main #target .target_contents .target_layout .target_left .target_icon img {width: 100%;}
+body main #target .target_contents .target_layout .target_right {
+  height: 100%;
+  display: flex; flex-flow: column nowrap;
+  justify-content: space-between;
+}
+body main #target .target_contents .target_layout .target_right .t_age {
+  font-size: 1.125em; font-weight: 800;
+}
+body main #target .target_contents .target_layout .target_right .t_txt {
+  line-height: 1.5;
+}
+body main #target .target_contents .target_layout .target_right .t_txt br {}
+body main #target .target_contents .target_layout .target_right .t_txt em {
+  font-weight: 800;
+}
+
+body main #reference {
+  padding-top: 100px;
+}
+body main #reference .reference_contents {}
+body main #reference .reference_contents > .reveal:first-child {
+  display: flex; flex-flow: row nowrap;
+  justify-content: space-between; align-items: flex-start;
+}
+body main #reference .reference_contents .reveal .section_title {}
+body main #reference .reference_contents .reveal .body_text {
+  margin-top: 20px; line-height: 1.5;
+}
+body main #reference .reference_contents .r_site_contents {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  margin-top: 80px;
+}
+body main #reference .reference_contents .r_site_contents .r_site {
+  background: #ffffff;
+  border: 1px solid #d0d0d0;
+  overflow: hidden;
+}
+body main #reference .reference_contents .r_site_contents .r_site.ett {}
+body main #reference .reference_contents .r_site_contents .r_site.aga {}
+body main #reference .reference_contents .r_site_contents .r_site .ref_card_header {
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  font-weight: 800;
+  color: #000000;
+  letter-spacing: 0.05em;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+}
+body main #reference .reference_contents .r_site_contents .r_site.ett .ref_card_header {
+  background-image: url(../img/bb_p_img/ett.svg);
+}
+body main #reference .reference_contents .r_site_contents .r_site.aga .ref_card_header {
+  background-image: url(../img/bb_p_img/aga.svg);
+}
+body main #reference .reference_contents .r_site_contents .r_site .ref_card_body {
+  padding: 40px;
+}
+body main #reference .reference_contents .r_site_contents .r_site .ref_card_body .ref_card_name {
+  font-size: 20px; font-weight: 700;
+  color: #000000;
+  margin-bottom: 8px;
+}
+body main #reference .reference_contents .r_site_contents .r_site .ref_card_body .ref_card_sub {
+  font-size: 12px;
+  font-weight: 300;
+  color: #777777;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+body main #reference .reference_contents .r_site_contents .r_site .ref_card_body .ref_card_desc {
+  font-size: 14px;
+  font-weight: 300;
+  color: #444444;
+  line-height: 1.2;
+}
+body main #reference .reference_contents .r_site_contents .r_site .ref_card_body .ref_card_desc br {}
+body main #reference .reference_contents .r_site_contents .r_site .ref_card_body .ref_tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+body main #reference .reference_contents .r_site_contents .r_site .ref_card_body .ref_tags .ref_tag {
+  padding: 6px 14px;
+  border: 1px solid #d0d0d0;
+  font-size: 12px;
+  font-weight: 400;
+  color: #444444;
+}
+body main #reference .reference_contents .ref_insight {
+  border-radius: 15px;
+  margin-top: 60px;
+  background: #000000;
+  padding: 56px 80px;
+}
+body main #reference .reference_contents .ref_insight .ref_insight_title {
+  font-weight: 700;
+  color: #e72819;
+  margin-bottom: 32px;
+}
+body main #reference .reference_contents .ref_insight .ref_insight_list {
+  list-style: none;
+  display: flex; flex-flow: column nowrap;
+  gap: 20px;
+}
+body main #reference .reference_contents .ref_insight .ref_insight_list li {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.75;
+  color: #fff;
+}
+body main #reference .reference_contents .ref_insight .ref_insight_list li p {width: 29px; margin-right: 10px;}
+body main #reference .reference_contents .ref_insight .ref_insight_list li p img {width: 100%;}
+body main #reference .reference_contents .ref_insight .ref_insight_list li em {
+  color: #ffffff;
+  font-weight: 700;
+  margin-left: 5px;
+}
+
+body main #styleguide {
+  padding: 160px 0;
+  background: #ffffff;
+}
+body main #styleguide .styleguide_contents {}
+body main #styleguide .styleguide_contents .reveal {
+  display: flex; flex-flow: row nowrap;
+  justify-content: space-between; align-items: center;
+}
+body main #styleguide .styleguide_contents .reveal .section_label {}
+body main #styleguide .styleguide_contents .reveal .section_title {margin-bottom: 20px;}
+body main #styleguide .styleguide_contents .reveal .body_text {}
+body main #styleguide .styleguide_contents .sg_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  margin-top: 60px;
+}
+body main #styleguide .styleguide_contents .sg_grid .sg_block {
+  height: 450px;
+  padding: 56px 48px;
+  background: #ECECEC;
+}
+body main #styleguide .styleguide_contents .sg_grid .sg_block:nth-child(1) {}
+body main #styleguide .styleguide_contents .sg_grid .sg_block:nth-child(2) {}
+body main #styleguide .styleguide_contents .sg_grid .sg_block:nth-child(3) {}
+body main #styleguide .styleguide_contents .sg_grid .sg_block .sg_block_title {
+  font-size: 13px; font-weight: 700;
+  color: #e72819;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+/* Color block */
+body main #styleguide .styleguide_contents .sg_grid .sg_block .color_swatches {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+body main #styleguide .styleguide_contents .sg_grid .sg_block .color_swatches .swatch_row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+body main #styleguide .styleguide_contents .sg_grid .sg_block .color_swatches .swatch_row .swatch {
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+  border: 1px solid #d0d0d0;
+}
+body main #styleguide .styleguide_contents .sg_grid .sg_block .color_swatches .swatch_row .swatch.point {
+  background: #e72819;
+  border-color: transparent;
+}
+body main #styleguide .styleguide_contents .sg_grid .sg_block .color_swatches .swatch_row .swatch.bg {
+  background: #ffffff;
+}
+body main #styleguide .styleguide_contents .sg_grid .sg_block .color_swatches .swatch_row .swatch.text {
+  background: #000000;
+  border-color: transparent;
+}
+body main #styleguide .styleguide_contents .sg_grid .sg_block .color_swatches .swatch_row .swatch_info {}
+body main #styleguide .styleguide_contents .sg_grid .sg_block .color_swatches .swatch_row .swatch_info .swatch_role {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #7e7e7e;
+  margin-bottom: 4px;
+}
+body main #styleguide .styleguide_contents .sg_grid .sg_block .color_swatches .swatch_row .swatch_info .swatch_hex {
+  font-size: 18px; font-weight: 700;
+  color: #000000;
+}
+/* Font block */
+body main #styleguide .styleguide_contents .sg_grid .sg_block .font_samples {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+body main #styleguide .styleguide_contents .sg_grid .sg_block .font_samples .font_sample {}
+body main #styleguide .styleguide_contents .sg_grid .sg_block .font_samples .font_sample .font_sample_meta {
+  font-size: 12px;
+  font-weight: 300;
+  color: #7e7e7e;
+  letter-spacing: 0.1em;
+  margin-bottom: 10px;
+}
+body main #styleguide .styleguide_contents .sg_grid .sg_block .font_samples .font_sample .font_sample_display {
+  color: #000000;
+}
+body main #styleguide .styleguide_contents .sg_grid .sg_block .font_samples .font_sample .font_sample_display.titan {
+  font-family: 'Titan One', cursive;
+  font-size: 42px;
+  line-height: 1;
+}
+body main #styleguide .styleguide_contents .sg_grid .sg_block .font_samples .font_sample .font_sample_display.pretendard_light {
+  font-family: 'Pretendard', sans-serif;
+  font-size: 22px;
+  font-weight: 200;
+  line-height: 1.4;
+}
+body main #styleguide .styleguide_contents .sg_grid .sg_block .font_samples .font_sample .font_sample_display.pretendard_semi {
+  font-family: 'Pretendard', sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+/* Component block */
+body main #styleguide .styleguide_contents .sg_grid .sg_block .component_showcase {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+body main #styleguide .styleguide_contents .sg_grid .sg_block .component_showcase > div {
+  display: flex;  flex-flow: row nowrap; justify-content: space-between;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px 30px;
+}
+body main #styleguide .styleguide_contents .sg_grid .sg_block .component_showcase > div .font_sample_meta {
+  font-weight: 700; font-size:12px;
+}
+body main #styleguide .styleguide_contents .sg_grid .sg_block .component_showcase > div .comp_buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+body main #styleguide .styleguide_contents .sg_grid .sg_block .component_showcase > div .comp_buttons .comp_btn {
+  border-radius: 6px;
+  width: 72px; height: 27px;
+  font-size: 0.81em;
+  font-weight: 700;
+  text-align: center;
+}
+body main #styleguide .styleguide_contents .sg_grid .sg_block .component_showcase > div .comp_buttons .comp_btn.primary {
+  background: #e72819;
+  color: #ffffff;
+  border: 2px solid #e72819;
+}
+body main #styleguide .styleguide_contents .sg_grid .sg_block .component_showcase > div .comp_buttons .comp_btn.outline {
+  background: #fff;
+  color: #000000;
+  border: 2px solid #000000;
+}
+
+body main #styleguide .styleguide_contents .sg_grid .sg_block .component_showcase > div .comp_icons {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+body main #styleguide .styleguide_contents .sg_grid .sg_block .component_showcase > div .comp_icons .comp_icon_item img {width: 100%;}
+body main #styleguide .styleguide_contents .sg_grid .sg_block .component_showcase > div .comp_icons .comp_icon_item {
+  width: 18px;
+  display: flex; flex-flow: row nowrap; gap: 10px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+body main #styleguide .styleguide_contents .sg_grid .sg_block .component_showcase > div .comp_paging {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+body main #styleguide .styleguide_contents .sg_grid .sg_block .component_showcase > div .comp_paging .page_dot img {width: 100%;}
+body main #styleguide .styleguide_contents .sg_grid .sg_block .component_showcase > div .comp_paging .page_dot {
+  width: 37px;
+}
+body main #styleguide .styleguide_contents .sg_grid .sg_block > p {
+  font-size:13px; font-weight:300; margin-top:28px; line-height:1.5;
+}
+
+/* ── mainpage ── */
+body main #mainpage {}
+body main #mainpage .mainpage_contents {
+  display: grid;
+  grid-template-columns: 1fr 650px;
+  align-items: start;
+  gap: 80px;
+}
+body main #mainpage .mainpage_contents .reveal {
+  /* sticky는 grid 직계 자식에서만 작동 — 여기서는 작동함 */
+  position: sticky;
+  top: 80px;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 20px;
+}
+body main #mainpage .mainpage_contents .reveal .section_title {}
+body main #mainpage .mainpage_contents .reveal .mainpage_right {}
+body main #mainpage .mainpage_contents .reveal .mainpage_right p {
+  font-weight: 500; font-size: 1.125em; line-height: 1.5;
+}
+body main #mainpage .mainpage_contents .mainpage_layout {}
+body main #mainpage .mainpage_contents .mainpage_layout .mainpage_img {
+  width: 650px;
+}
+body main #mainpage .mainpage_contents .mainpage_layout .mainpage_img img { width: 100%; }
+
+/* ── subpage ── */
+body main #subpage {}
+body main #subpage .subpage_contents {
+  display: grid;
+  grid-template-columns: 1fr 650px;
+  align-items: start;
+  gap: 80px;
+}
+body main #subpage .subpage_contents .reveal {
+  position: sticky;
+  top: 80px;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 20px;
+}
+body main #subpage .subpage_contents .reveal .section_title {}
+body main #subpage .subpage_contents .reveal .subpage_right {}
+body main #subpage .subpage_contents .reveal .subpage_right p {
+  font-weight: 500; font-size: 1.125em; line-height: 1.5;
+}
+body main #subpage .subpage_contents .subpage_layout {}
+body main #subpage .subpage_contents .subpage_layout .subpage_img {
+  width: 650px;
+}
+body main #subpage .subpage_contents .subpage_layout .subpage_img img { width: 100%; }
+
+/* ── 섹션 높이 ── */
+#mainpage,
+#subpage {
+  height: auto;
+  min-height: 100vh;
+}
+
+
+/* ==============================
+  Responsive
+============================== */
+@media screen and (max-width: 1280px) {
+  body main section .contents {}
+  body main section .contents .section_title {}
+  body main #hero .hero_contents .hero_left .hero_title h1 {}
+  body main #overview .overview_contents .reveal .overview_right {}
+  body main #keyword .keyword_contents .keyword_cards {}
+  body main #target .target_contents .target_layout {}
+  body main #reference .reference_contents .r_site_contents {}
+  body main #styleguide .styleguide_contents .sg_grid {}
+  body main #mainpage .mainpage_contents .mainpage_layout {}
+  body main #subpage .subpage_contents .subpage_layout {}
+}
+
+@media screen and (max-width: 1024px) {
+  body main section {}
+  body main section .contents {}
+  body main section .contents .section_title {}
+  body main #hero .hero_contents .hero_left {}
+  body main #overview .overview_contents .reveal .overview_right {}
+  body main #keyword .keyword_contents .keyword_cards {}
+  body main #target .target_contents .target_layout {}
+  body main #reference .reference_contents .r_site_contents {}
+  body main #reference .reference_contents .ref_insight {}
+  body main #styleguide .styleguide_contents .sg_grid {}
+  body main #mainpage .mainpage_contents .mainpage_layout {}
+  body main #subpage .subpage_contents .subpage_layout {}
+}
+
+@media screen and (max-width: 768px) {
+  body main section {}
+  body main section .contents {}
+  body main section .contents .section_title {}
+  body main section .contents .body_text {}
+  body main #hero .hero_contents .hero_left {}
+  body main #hero .hero_contents .hero_left .hero_title h1 {}
+  body main #hero .hero_contents .hero_left .hero_info br {}
+  body main #overview .overview_contents .reveal .overview_right {}
+  body main #overview .overview_contents .reveal .overview_right > p:not(.bbimg) br {}
+  body main #keyword .keyword_contents .keyword_cards {}
+  body main #keyword .keyword_contents .keyword_cards .keyword {}
+  body main #target .target_contents .target_layout {}
+  body main #target .target_contents .target_layout .target_right .t_txt br {}
+  body main #reference .reference_contents .r_site_contents {}
+  body main #reference .reference_contents .r_site_contents .r_site .ref_card_body .ref_card_desc br {}
+  body main #reference .reference_contents .ref_insight .ref_insight_list li p {}
+  body main #styleguide .styleguide_contents .sg_grid {}
+  body main #styleguide .styleguide_contents .sg_grid .sg_block .component_showcase > div .comp_buttons {}
+  body main #mainpage .mainpage_contents .reveal .mainpage_right p br {}
+  body main #mainpage .mainpage_contents .mainpage_layout .mainpage_img {}
+  body main #subpage .subpage_contents .reveal .subpage_right p br {}
+  body main #subpage .subpage_contents .subpage_layout .subpage_img {}
+}
+
+@media screen and (max-width: 480px) {
+  body main section {}
+  body main section .contents {}
+  body main section .contents .section_title {}
+  body main #hero .hero_contents .hero_left .hero_title h1 {}
+  body main #hero .hero_contents .hero_left .hero_title .hero_subtitle {}
+  body main #hero .hero_contents .hero_left .hero_info {}
+  body main #overview .overview_contents .reveal .overview_right {}
+  body main #keyword .keyword_contents .keyword_cards .keyword .kw_title {}
+  body main #keyword .keyword_contents .keyword_cards .keyword .kw_desc {}
+  body main #target .target_contents .target_layout .target_right .t_age {}
+  body main #target .target_contents .target_layout .target_right .t_txt {}
+  body main #reference .reference_contents .r_site_contents .r_site .ref_card_body {}
+  body main #reference .reference_contents .ref_insight {}
+  body main #styleguide .styleguide_contents .sg_grid .sg_block {}
+  body main #styleguide .styleguide_contents .sg_grid .sg_block .component_showcase > div .comp_buttons .comp_btn {}
+  body main #mainpage .mainpage_contents .mainpage_layout .mainpage_img {}
+  body main #subpage .subpage_contents .subpage_layout .subpage_img {}
+}
+  
+    
+  @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-left > * {
+      animation: fadeUp 0.8s ease forwards;
+      opacity: 0;
+    }
+    .hero-eyebrow { animation-delay: 0.1s; }
+    .hero-title { animation-delay: 0.25s; }
+    .hero-subtitle { animation-delay: 0.4s; }
+    .hero-desc { animation-delay: 0.55s; }
+
+    .hero-right {
+      animation: fadeUp 0.8s 0.5s ease forwards;
+      opacity: 0;
+    }
+
+    /* scroll reveal (JS-assisted) */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+    }
