@@ -2,18 +2,16 @@ html {scroll-behavior: smooth;} /* 스크롤 애니메이션 효과 */
 body {}
 body * {}
 body main {
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh; /* ← 이게 없으면 snap이 작동 안 함! (중요) */
 }
 body main section {
+  scroll-snap-align: start;
   min-height: 100vh;
   height: auto;
-  padding-top: 200px;
+  padding-top: 50px;
   width: 100%;
-  scroll-snap-align: start;
-}
-body main section.no-scroll {
-  scroll-snap-align: none;
 }
 
 body main section .contents {
@@ -21,7 +19,7 @@ body main section .contents {
   width: 1350px;
 }
 body main section .contents .reveal {}
-body main section .contents .reveal.active {}
+body main section .contents .reveal.visible {}
 body main section .contents .section_title {
   font-size: 1.25rem; font-weight:700; height: fit-content;
   border-bottom: #e72819 solid 5px;width: fit-content; 
@@ -35,7 +33,7 @@ body main section img {}
 
 body main #hero {
   padding-top: 0px;
-  background-image: url(../img/hero-bebedepino.jpeg);
+  background-image: url(../img/bb_p_img/intro_right02.png);
   background-position: center;
   background-size: cover;
   position: relative;
@@ -43,12 +41,15 @@ body main #hero {
 body main #hero::before {
   content: ''; width: 100%; height: 100vh;
   background-color: rgba(0, 0, 0, 0.4);
-  position: absolute; z-index: 990;
+  position: absolute; z-index: 800;
 }
 body main #hero .hero_contents {
 }
 body main #hero .hero_contents .hero_left {}
 body main #hero .hero_contents .hero_left > p {
+  position: relative;
+  z-index: 999;
+  color: #ffffff;
 }
 body main #hero .hero_contents .hero_left > p:first-child {
   padding-top: 200px;
@@ -67,18 +68,21 @@ body main #hero .hero_contents .hero_left .hero_title h1 {
 body main #hero .hero_contents .hero_left .hero_title h1 span {
   font-family: 'Titan One';
   color: #e72819;
+  z-index: 999;
 }
 body main #hero .hero_contents .hero_left .hero_title .hero_subtitle {
+  color: #ffffff;
   font-weight: 500;
 }
 body main #hero .hero_contents .hero_left .hero_info {
+  color: #d8d8d8;
   margin-top: 50px;
   font-size: 0.81em; line-height: 1.5;
 }
 body main #hero .hero_contents .hero_left .hero_info br {}
 
 body main #overview {
-  padding-top: 200px;
+  padding-top: 100px;
 }
 body main #overview .overview_contents {}
 body main #overview .overview_contents .reveal {
@@ -91,80 +95,89 @@ body main #overview .overview_contents .reveal .overview_right .bbimg {
 }
 body main #overview .overview_contents .reveal .overview_right .bbimg img {width: 100%;}
 body main #overview .overview_contents .reveal .overview_right > p {
-  font-size: 1.12;
+  position: relative;
+  z-index: 999;
+  font-size: 1.12rem;
   line-height: 1.5;
 }
+body main #key_target {}
 
-body main #keyword {}
-body main #keyword .keyword_contents {}
-body main #keyword .keyword_contents .reveal .section_title {
+body main #key_target #keyword {}
+body main #key_target #keyword .keyword_contents {}
+body main #key_target #keyword .keyword_contents .reveal .section_title {
   margin: 0 auto;
 }
-body main #keyword .keyword_contents .reveal {}
-body main #keyword .keyword_contents .keyword_cards {
+body main #key_target #keyword .keyword_contents .reveal {}
+body main #key_target #keyword .keyword_contents .keyword_cards {
   width: 100%;
   margin: 0 auto;
   display: flex; flex-flow: row nowrap;
   justify-content: space-between; align-items: center; gap: 90px;
   text-align: center;
-  margin-top: 150px;
+  margin-top: 80px;
 }
-body main #keyword .keyword_contents .keyword_cards .keyword {
+body main #key_target #keyword .keyword_contents .keyword_cards .keyword {
   width: 100%;
   margin: 0 auto;
 }
-body main #keyword .keyword_contents .keyword_cards .keyword.card1 {}
-body main #keyword .keyword_contents .keyword_cards .keyword.card2 {}
-body main #keyword .keyword_contents .keyword_cards .keyword.card3 {}
-body main #keyword .keyword_contents .keyword_cards .keyword .kw_icon {
+body main #key_target #keyword .keyword_contents .keyword_cards .keyword.card1 {}
+body main #key_target #keyword .keyword_contents .keyword_cards .keyword.card2 {}
+body main #key_target #keyword .keyword_contents .keyword_cards .keyword.card3 {}
+body main #key_target #keyword .keyword_contents .keyword_cards .keyword .kw_icon {
   margin: 0 auto;
   width: 80px;
   margin-bottom: 23px;
 }
-body main #keyword .keyword_contents .keyword_cards .keyword .kw_icon img {width: 100%;}
-body main #keyword .keyword_contents .keyword_cards .keyword .kw_title {
+body main #key_target #keyword .keyword_contents .keyword_cards .keyword .kw_icon img {width: 100%;}
+body main #key_target #keyword .keyword_contents .keyword_cards .keyword .kw_title {
   margin-bottom: 10px;
   font-size: 1.25em; font-weight: 700;
 }
-body main #keyword .keyword_contents .keyword_cards .keyword .kw_desc {
+body main #key_target #keyword .keyword_contents .keyword_cards .keyword .kw_desc {
   font-weight: 500;
 }
 
-body main #target {}
-body main #target .target_contents {}
-body main #target .target_contents .reveal {}
-body main #target .target_contents .reveal .section_title {
+body main #key_target #target {
+  margin-top: 150px;
+}
+body main #key_target #target .target_contents {}
+body main #key_target #target .target_contents .reveal {}
+body main #key_target #target .target_contents .reveal .section_title {
     margin: 0 auto;
 }
-body main #target .target_contents .target_layout {
+body main #key_target #target .target_contents .target_layout {
   width: 100%; height: 202px;
-  margin-top: 100px; gap: 100px;
+  margin-top: 80px; gap: 100px;
   display: flex; flex-flow: row nowrap;
   align-items: center; justify-content: center;
 }
-body main #target .target_contents .target_layout .target_left {}
-body main #target .target_contents .target_layout .target_left .target_icon {width: 202px;}
-body main #target .target_contents .target_layout .target_left .target_icon img {width: 100%;}
-body main #target .target_contents .target_layout .target_right {
+body main #key_target #target .target_contents .target_layout .target_left {}
+body main #key_target #target .target_contents .target_layout .target_left .target_icon {width: 202px;}
+body main #key_target #target .target_contents .target_layout .target_left .target_icon img {width: 100%;}
+body main #key_target #target .target_contents .target_layout .target_right {
   height: 100%;
   display: flex; flex-flow: column nowrap;
   justify-content: space-between;
 }
-body main #target .target_contents .target_layout .target_right .t_age {
+body main #key_target #target .target_contents .target_layout .target_right .t_age {
   font-size: 1.125em; font-weight: 800;
 }
-body main #target .target_contents .target_layout .target_right .t_txt {
+body main #key_target #target .target_contents .target_layout .target_right .t_txt {
   line-height: 1.5;
 }
-body main #target .target_contents .target_layout .target_right .t_txt br {}
-body main #target .target_contents .target_layout .target_right .t_txt em {
+body main #key_target #target .target_contents .target_layout .target_right .t_txt br {}
+body main #key_target #target .target_contents .target_layout .target_right .t_txt em {
   font-weight: 800;
 }
 
 body main #reference {
-  padding-top: 100px;
+  padding-top: 50px;
 }
-body main #reference .reference_contents {}
+body main #reference .reference_contents {
+    margin: 0 auto;
+    width: 1350px;
+}
+
 body main #reference .reference_contents > .reveal:first-child {
   display: flex; flex-flow: row nowrap;
   justify-content: space-between; align-items: flex-start;
@@ -273,7 +286,7 @@ body main #reference .reference_contents .ref_insight .ref_insight_list li em {
 }
 
 body main #styleguide {
-  padding: 160px 0;
+  padding: 80px 0;
   background: #ffffff;
 }
 body main #styleguide .styleguide_contents {}
@@ -288,7 +301,7 @@ body main #styleguide .styleguide_contents .sg_grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2px;
-  margin-top: 60px;
+  margin-top: 100px;
 }
 body main #styleguide .styleguide_contents .sg_grid .sg_block {
   height: 450px;
@@ -513,8 +526,8 @@ body main #subpage .subpage_contents .subpage_layout .subpage_img img { width: 1
   body main section .contents .section_title {}
   body main #hero .hero_contents .hero_left .hero_title h1 {}
   body main #overview .overview_contents .reveal .overview_right {}
-  body main #keyword .keyword_contents .keyword_cards {}
-  body main #target .target_contents .target_layout {}
+  body main #key_target #keyword .keyword_contents .keyword_cards {}
+  body main #key_target #target .target_contents .target_layout {}
   body main #reference .reference_contents .r_site_contents {}
   body main #styleguide .styleguide_contents .sg_grid {}
   body main #mainpage .mainpage_contents .mainpage_layout {}
@@ -527,8 +540,8 @@ body main #subpage .subpage_contents .subpage_layout .subpage_img img { width: 1
   body main section .contents .section_title {}
   body main #hero .hero_contents .hero_left {}
   body main #overview .overview_contents .reveal .overview_right {}
-  body main #keyword .keyword_contents .keyword_cards {}
-  body main #target .target_contents .target_layout {}
+  body main #key_target #keyword .keyword_contents .keyword_cards {}
+  body main #key_target #target .target_contents .target_layout {}
   body main #reference .reference_contents .r_site_contents {}
   body main #reference .reference_contents .ref_insight {}
   body main #styleguide .styleguide_contents .sg_grid {}
@@ -546,10 +559,10 @@ body main #subpage .subpage_contents .subpage_layout .subpage_img img { width: 1
   body main #hero .hero_contents .hero_left .hero_info br {}
   body main #overview .overview_contents .reveal .overview_right {}
   body main #overview .overview_contents .reveal .overview_right > p:not(.bbimg) br {}
-  body main #keyword .keyword_contents .keyword_cards {}
-  body main #keyword .keyword_contents .keyword_cards .keyword {}
-  body main #target .target_contents .target_layout {}
-  body main #target .target_contents .target_layout .target_right .t_txt br {}
+  body main #key_target #keyword .keyword_contents .keyword_cards {}
+  body main #key_target #keyword .keyword_contents .keyword_cards .keyword {}
+  body main #key_target #target .target_contents .target_layout {}
+  body main #key_target #target .target_contents .target_layout .target_right .t_txt br {}
   body main #reference .reference_contents .r_site_contents {}
   body main #reference .reference_contents .r_site_contents .r_site .ref_card_body .ref_card_desc br {}
   body main #reference .reference_contents .ref_insight .ref_insight_list li p {}
@@ -569,10 +582,10 @@ body main #subpage .subpage_contents .subpage_layout .subpage_img img { width: 1
   body main #hero .hero_contents .hero_left .hero_title .hero_subtitle {}
   body main #hero .hero_contents .hero_left .hero_info {}
   body main #overview .overview_contents .reveal .overview_right {}
-  body main #keyword .keyword_contents .keyword_cards .keyword .kw_title {}
-  body main #keyword .keyword_contents .keyword_cards .keyword .kw_desc {}
-  body main #target .target_contents .target_layout .target_right .t_age {}
-  body main #target .target_contents .target_layout .target_right .t_txt {}
+  body main #key_target #keyword .keyword_contents .keyword_cards .keyword .kw_title {}
+  body main #key_target #keyword .keyword_contents .keyword_cards .keyword .kw_desc {}
+  body main #key_target #target .target_contents .target_layout .target_right .t_age {}
+  body main #key_target #target .target_contents .target_layout .target_right .t_txt {}
   body main #reference .reference_contents .r_site_contents .r_site .ref_card_body {}
   body main #reference .reference_contents .ref_insight {}
   body main #styleguide .styleguide_contents .sg_grid .sg_block {}
