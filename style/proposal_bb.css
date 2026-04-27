@@ -97,7 +97,7 @@ body main #overview .overview_contents .reveal .overview_right .bbimg img {width
 body main #overview .overview_contents .reveal .overview_right > p {
   position: relative;
   z-index: 999;
-  font-size: 1.12rem;
+  font-size: 0.81rem;
   line-height: 1.5;
 }
 body main #key_target {}
@@ -134,7 +134,8 @@ body main #key_target #keyword .keyword_contents .keyword_cards .keyword .kw_tit
   font-size: 1.25em; font-weight: 700;
 }
 body main #key_target #keyword .keyword_contents .keyword_cards .keyword .kw_desc {
-  font-weight: 500;
+  font-weight: 400;
+  font-size: 0.81rem;
 }
 
 body main #key_target #target {
@@ -163,11 +164,12 @@ body main #key_target #target .target_contents .target_layout .target_right .t_a
   font-size: 1.125em; font-weight: 800;
 }
 body main #key_target #target .target_contents .target_layout .target_right .t_txt {
+  font-size: 0.81rem;
   line-height: 1.5;
 }
 body main #key_target #target .target_contents .target_layout .target_right .t_txt br {}
 body main #key_target #target .target_contents .target_layout .target_right .t_txt em {
-  font-weight: 800;
+  font-weight: 700;
 }
 
 body main #reference {
@@ -184,6 +186,7 @@ body main #reference .reference_contents > .reveal:first-child {
 }
 body main #reference .reference_contents .reveal .section_title {}
 body main #reference .reference_contents .reveal .body_text {
+  font-size: 0.81rem;
   margin-top: 20px; line-height: 1.5;
 }
 body main #reference .reference_contents .r_site_contents {
@@ -296,7 +299,9 @@ body main #styleguide .styleguide_contents .reveal {
 }
 body main #styleguide .styleguide_contents .reveal .section_label {}
 body main #styleguide .styleguide_contents .reveal .section_title {margin-bottom: 20px;}
-body main #styleguide .styleguide_contents .reveal .body_text {}
+body main #styleguide .styleguide_contents .reveal .body_text {
+  font-size: 0.81rem;
+}
 body main #styleguide .styleguide_contents .sg_grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -475,8 +480,9 @@ body main #mainpage .mainpage_contents .reveal {
 }
 body main #mainpage .mainpage_contents .reveal .section_title {}
 body main #mainpage .mainpage_contents .reveal .mainpage_right {}
-body main #mainpage .mainpage_contents .reveal .mainpage_right p {
-  font-weight: 500; font-size: 1.125em; line-height: 1.5;
+body main #mainpage .mainpage_contents .reveal .mainpage_right p,
+body main #subpage .subpage_contents .reveal .subpage_right p {
+  font-weight: 400; font-size: 0.81em; line-height: 1.5;
 }
 body main #mainpage .mainpage_contents .mainpage_layout {}
 body main #mainpage .mainpage_contents .mainpage_layout .mainpage_img {
@@ -501,9 +507,7 @@ body main #subpage .subpage_contents .reveal {
 }
 body main #subpage .subpage_contents .reveal .section_title {}
 body main #subpage .subpage_contents .reveal .subpage_right {}
-body main #subpage .subpage_contents .reveal .subpage_right p {
-  font-weight: 500; font-size: 1.125em; line-height: 1.5;
-}
+body main #subpage .subpage_contents .reveal .subpage_right p {}
 body main #subpage .subpage_contents .subpage_layout {}
 body main #subpage .subpage_contents .subpage_layout .subpage_img {
   width: 650px;
