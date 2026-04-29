@@ -9,7 +9,7 @@ html::-o-scrollbar-thumb {background-color: #222; border-radius: 5px;}
 /* ### Chrome, Safari, Edge 등 웹킷 기반 브라우저 */
 html {
     ::-webkit-scrollbar {width: 10px;}
-    ::-webkit-scrollbar-track {box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);}
+    ::-webkit-scrollbar-track {box-shadow: inset 0 0 5px rgba(199, 199, 199, 0.3);}
     ::-webkit-scrollbar-thumb {background-color: #222; border-radius: 5px;}
 }
 body {
@@ -27,25 +27,29 @@ body {
 }
 #wrap .info,
 #wrap .project_wrap .project {
-    max-width: 1400px;
+    /* max-width: 1400px; */
     margin: 0 auto;
 }
 /* =============================1. intro */
 #wrap .intro {
     height:100vh;
     background: linear-gradient(#fff 70%, #E5E5E5); /* 그라데이션 색상옆 공백 후 퍼센티지: 색상 위치 */
-    display:flex; flex-flow: row nowrap;
+    display:flex; flex-flow: column nowrap; gap:7px;
     justify-content: center; align-items: center;
 }
-#wrap .intro h1 {}
-#wrap .intro h1 span {
-    display: block; text-align: center;
-    font-size: 1.31rem; line-height: 1.4; font-weight: 300;
+#wrap .intro h1 {
+    display: flex; flex-flow: row nowrap;
+    justify-content: space-between; align-items: center;
+    width: max-content;
 }
-#wrap .intro h1 span:nth-child(1) {}
-#wrap .intro h1 span:nth-child(2) {}
-#wrap .intro h1 .name {
-    margin-top: 20px;
+#wrap .intro h1 p {
+    font-size: 0.88rem; line-height: 1.7; font-weight:300;
+}
+#wrap .intro h1 .mini_bar {
+    width: 1px; height: 8px; background-color: #000;
+}
+#wrap .intro .pp_title {
+    font-size: 4.13rem; line-height: 1.0; font-weight:800;
 }
 /* =============================2. info */
 #wrap .info {

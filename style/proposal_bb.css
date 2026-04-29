@@ -33,7 +33,7 @@ body main section img {}
 
 body main #hero {
   padding-top: 0px;
-  background-image: url(../img/bb_p_img/intro_right02.png);
+  background-image: url(../img/bb_p_img/편집/intro_bb_left.png);
   background-position: center;
   background-size: cover;
   position: relative;
@@ -270,7 +270,7 @@ body main #reference .reference_contents .ref_insight .ref_insight_title {
 body main #reference .reference_contents .ref_insight .ref_insight_list {
   list-style: none;
   display: flex; flex-flow: column nowrap;
-  gap: 20px;
+  gap: 5px;
 }
 body main #reference .reference_contents .ref_insight .ref_insight_list li {
   display: flex;

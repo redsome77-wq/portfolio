@@ -21,21 +21,13 @@
         <div class="intro section">
             <h1>
                 <p>UX/UI design</p>
-                <div></div>
+                <div class="mini_bar"></div>
                 <p>Web publishing</p>
-                <div></div>
+                <div class="mini_bar"></div>
                 <p>Editorial design</p>
             </h1>
-            <span class="title">PORTFOLIO</span>
+            <p class="pp_title">PORTFOLIO</p>
         </div>
-        <header>
-            <ul class="sticky_bar">
-                <li>About Me</li>
-                <li>UX/UI-</li>
-                <li>-Design</li>
-                <li>About Me</li>
-            </ul>
-        </header>
         <div class="about section">
             <div class="about_wrap">
                 <div class="left_wrap">
@@ -100,10 +92,14 @@
                     <dd>Javascript 활용한 웹에 들어가는 최신 동적 애니메이션 활용 가능</dd>
                 </dl>
             </div>
-            </div>
         </div>
         <!-- 프로젝트 시작 -->
         <div class="project_wrap section">
+        <div class="category_title">
+            <a href="#" data-index="0" class="active">UX/UI-</a>
+            <a href="#" data-index="1">-Design</a>
+            <a href="#" data-index="2">Contact Me</a>
+        </div>
             <!-- ================================================웹디자인 시작 -->
             <h1>Project</h1>
             <div class="project project1">
@@ -125,39 +121,42 @@
                     </div>
                 </div>
             </div>
+        </div>
             <!-- ================================================그래픽디자인 시작 -->
-            <div class="graphic_title section">
-                <h1>Graphic Design</h1>
-                <p>이미지를 클릭하면 크게 볼 수 있습니다.</p>
+        <div class="graphic_title section">
+            <h1>Graphic Design</h1>
+            <p>이미지를 클릭하면 크게 볼 수 있습니다.</p>
+        </div>
+        <!-- 보이는영역(뷰포트) > 슬라이드부모 > 개별슬라이드들 -->
+        <div class="graphic_wrap">
+            <div class="graphic_container">
+                <a href="#"><img src="./img/web/design03.jpg" alt=""></a>
+                <a href="#"><img src="./img/web/design02.jpg" alt=""></a>
+                <a href="#"><img src="./img/web/design14.jpg" alt=""></a>
+                <a href="#"><img src="./img/web/design04.jpg" alt=""></a>
+                <a href="#"><img src="./img/web/design05.jpg" alt=""></a>
+                <a href="#"><img src="./img/web/design06.jpg" alt=""></a>
+                <a href="#"><img src="./img/web/design07.jpg" alt=""></a>
+                <a href="#"><img src="./img/web/design08.jpg" alt=""></a>
+                <a href="#"><img src="./img/web/design09.jpg" alt=""></a>
+                <a href="#"><img src="./img/web/design10.png" alt=""></a>
+                <a href="#"><img src="./img/web/design11.jpg" alt=""></a>
+                <a href="#"><img src="./img/web/design12.jpg" alt=""></a>
+                <a href="#"><img src="./img/web/design13.jpg" alt=""></a>
+                <a href="#"><img src="./img/web/design01.jpg" alt=""></a>
             </div>
-            <!-- 보이는영역(뷰포트) > 슬라이드부모 > 개별슬라이드들 -->
-            <div class="graphic_wrap">
-                <div class="graphic_container">
-                    <a href="#"><img src="./img/web/design03.jpg" alt=""></a>
-                    <a href="#"><img src="./img/web/design02.jpg" alt=""></a>
-                    <a href="#"><img src="./img/web/design14.jpg" alt=""></a>
-                    <a href="#"><img src="./img/web/design04.jpg" alt=""></a>
-                    <a href="#"><img src="./img/web/design05.jpg" alt=""></a>
-                    <a href="#"><img src="./img/web/design06.jpg" alt=""></a>
-                    <a href="#"><img src="./img/web/design07.jpg" alt=""></a>
-                    <a href="#"><img src="./img/web/design08.jpg" alt=""></a>
-                    <a href="#"><img src="./img/web/design09.jpg" alt=""></a>
-                    <a href="#"><img src="./img/web/design10.png" alt=""></a>
-                    <a href="#"><img src="./img/web/design11.jpg" alt=""></a>
-                    <a href="#"><img src="./img/web/design12.jpg" alt=""></a>
-                    <a href="#"><img src="./img/web/design13.jpg" alt=""></a>
-                    <a href="#"><img src="./img/web/design01.jpg" alt=""></a>
-                </div>
+        </div>
+        <!-- 위 그래픽 이미지 클릭시 실행되는 팝업 -->
+        <div class="graphic_popup_bg" title="아무 곳이나 클릭하면 팝업이 닫힙니다.">
+            <div class="popup">
+                <p>아무 곳이나 누르면 닫혀요!
+                    <button type="button" id="close_btn">X</button>
+                </p>
+                <img src="./img/web/design05.jpg" alt="">
             </div>
-            <!-- 위 그래픽 이미지 클릭시 실행되는 팝업 -->
-            <div class="graphic_popup_bg" title="아무 곳이나 클릭하면 팝업이 닫힙니다.">
-                <div class="popup">
-                    <p>아무 곳이나 누르면 닫혀요!
-                        <button type="button" id="close_btn">X</button>
-                    </p>
-                    <img src="./img/web/design05.jpg" alt="">
-                </div>
-            </div>
+        </div>
+            <!-- ================================================컨택트존 시작 -->
+        <div class="contact section">
         </div>
     </div>
 </body>
